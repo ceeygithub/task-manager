@@ -109,3 +109,13 @@ section{
   height: 60vh;
   width: 100%;
 }
+li{
+  display:flex ;
+flex-direction: column;  
+text-align: center;
+   background: #EFEFEF;
+justify-content: center;
+align-items: center;
+margin: 5px;
+border-radius: 5px;
+}
