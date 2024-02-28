@@ -33,7 +33,7 @@ const AddTaskForm = ({ onAdd }) => {
       <h1 className='header1'>Add Task</h1>
       <form onSubmit={formik.handleSubmit}  className='form'>
         <label>
-          Task Name:
+          Task Name
           <input
           placeholder="Enter task" 
             type="text"
@@ -46,7 +46,7 @@ const AddTaskForm = ({ onAdd }) => {
         {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>}
 
         <label > 
-          Description:
+          Description
           <textarea
           placeholder="Enter description" 
             name="description"
@@ -58,7 +58,7 @@ const AddTaskForm = ({ onAdd }) => {
         {formik.touched.description && formik.errors.description && <div>{formik.errors.description}</div>}
 
         <label>
-          Due Date:
+          Due Date
           <input
             type="date"
             name="dueDate"
