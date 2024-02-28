@@ -5,7 +5,7 @@ const TaskList = ({ tasks, onEdit, onDelete, onComplete }) => {
   return (
     <div>
       <h1>Task List</h1>
-      <ul>
+      <ul style={{ listStyleType: 'none' }}> 
         {tasks.map((task) => (
           <TaskItem
             key={task.id}
