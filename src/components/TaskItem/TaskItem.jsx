@@ -3,7 +3,7 @@
 import React from 'react';
 const TaskItem = ({ task, onEdit, onDelete, onComplete }) => {
   return (
-    <li>
+    <li style={{ display: 'flex' , flexDirection:'column' }}>
       <h3>{task.name}</h3>
       <p>{task.description}</p>
       <p>Due Date: {task.dueDate}</p>

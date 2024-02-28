@@ -52,7 +52,7 @@ const TaskManagerApp = () => {
     <Router>
       <Routes>
 
-         <Route path="/" element={<div>
+         <Route path="/" element={<div  className='inner-container'>
             <AddTaskForm onAdd={addTask} />
         <TaskList tasks={tasks} onEdit={editTask} onDelete={deleteTask} onComplete={markTaskAsComplete} />
         

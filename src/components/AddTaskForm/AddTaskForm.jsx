@@ -2,11 +2,11 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import  './AddTaskForm'
-// import { useHistory } from 'react-router-dom';
+
 import { useNavigate } from 'react-router-dom';
 
 const AddTaskForm = ({ onAdd }) => {
-//   const history = useHistory();
+
  const navigate = useNavigate();
 
   const formik = useFormik({
@@ -30,11 +30,12 @@ const AddTaskForm = ({ onAdd }) => {
 
   return (
     <div className='AddTaskForm '>
-      <h1>Add Task</h1>
-      <form onSubmit={formik.handleSubmit} >
+      <h1 className='header1'>Add Task</h1>
+      <form onSubmit={formik.handleSubmit}  className='form'>
         <label>
           Task Name:
           <input
+          placeholder="Enter task" 
             type="text"
             name="name"
             value={formik.values.name}
@@ -47,6 +48,7 @@ const AddTaskForm = ({ onAdd }) => {
         <label > 
           Description:
           <textarea
+          placeholder="Enter description" 
             name="description"
             value={formik.values.description}
             onChange={formik.handleChange}
