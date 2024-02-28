@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import  './AddTaskForm'
 // import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,9 +29,9 @@ const AddTaskForm = ({ onAdd }) => {
   });
 
   return (
-    <div>
+    <div className='AddTaskForm '>
       <h1>Add Task</h1>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit} >
         <label>
           Task Name:
           <input
@@ -43,7 +44,7 @@ const AddTaskForm = ({ onAdd }) => {
         </label>
         {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>}
 
-        <label>
+        <label > 
           Description:
           <textarea
             name="description"

@@ -5,7 +5,13 @@ import AddTaskForm from '../AddTaskForm/AddTaskForm';
 import EditTaskForm from '../EditTaskForm/EditTaskForm';
 
 const TaskManagerApp = () => {
-  const [tasks, setTasks] = useState([]);
+      // Initialize tasks state with sample data
+  const [tasks, setTasks] = useState([
+    { id: 1, name: 'Task 1', description: 'Description 1', dueDate: '2024-03-01', completed: false },
+    { id: 2, name: 'Task 2', description: 'Description 2', dueDate: '2024-03-05', completed: true },
+    // Add more tasks as needed
+  ]);
+
 
   useEffect(() => {
     // Load tasks from local storage on component mount
@@ -42,15 +48,20 @@ const TaskManagerApp = () => {
   };
 
   return (
-    <>
+   
     <Router>
       <Routes>
-        <Route path="/" element={<TaskList tasks={tasks} onEdit={editTask} onDelete={deleteTask} onComplete={markTaskAsComplete} />} />
+
+         <Route path="/" element={<div>
+            <AddTaskForm onAdd={addTask} />
+        <TaskList tasks={tasks} onEdit={editTask} onDelete={deleteTask} onComplete={markTaskAsComplete} />
+        
+      </div>} />
         <Route path="/add-task" element={<AddTaskForm onAdd={addTask} />} />
         <Route path="/edit-task/:taskId" element={<EditTaskForm onEdit={editTask} tasks={tasks} />} />
       </Routes>
     </Router>
-    </>
+  
   );
 };
 
