@@ -15,7 +15,7 @@ const TaskList = ({ tasks, onEdit, onDelete, onComplete }) => {
 
       {/* Progress Section */}
       <section  >
-        <h2 style={{ background: '#CAD9F6' }}>To do</h2>
+        <h2 style={{ background: '#CAD9F6' ,color:'#14367B'}}>To do</h2>
         <ul className='tasksSection'>
           {progressTasks.map((task) => (
             <li key={task.id}>
@@ -32,7 +32,7 @@ const TaskList = ({ tasks, onEdit, onDelete, onComplete }) => {
 
       {/* Ongoing Section (Tasks not completed yet) */}
       <section >
-        <h2 style={{ background: '#CC7000' }}>In progress</h2>
+        <h2 style={{ background: '#FFE4C2' ,color:'#CC7000'}}>In progress</h2>
         <ul className='tasksSection'>
           {progressTasks.map((task) => (
             <li key={task.id}>
