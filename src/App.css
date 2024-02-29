@@ -25,10 +25,10 @@
 .inner-container{
 display: grid;
 grid-template-columns: 1fr 2fr;
+max-width:1180px ;
 }
 .AddTaskForm {
   max-width: 90%;
-  /* height: 400px; */
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
